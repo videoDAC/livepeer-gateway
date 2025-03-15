@@ -1,20 +1,20 @@
-# Livepeer Broadcaster
+# Livepeer Gateway
 
 ## Introduction
 
-This page gives an introduction to Livepeer Broadcaster.
+This page gives an introduction to Livepeer Gateway.
 
 [Livepeer](https://livepeer.org) is a project to create a decentralised public network providing video infrastructure services, based on open-source software. [(Livepeer on github)](https://github.com/livepeer/), [(Livepeer Primer)](https://livepeer.org/primer).
 
-The main objective is to help you install and operate a Broadcaster on a computer, and to learn how to interact with it.
+The main objective is to help you install and operate a Gateway on a computer, and to learn how to interact with it.
 
 ## Overview
 
-Livepeer Broadcaster is software to run on a computer or a server. It uses entirely open-source and freely available software.
+Livepeer Gateway is software to run on a computer or a server. It uses entirely open-source and freely available software.
 
-A Livepeer Broadcaster can **receive** and **serve** streaming content. It can also be configured to transcode streaming content to improve accessibility of content.
+A Livepeer Gateway can **receive** and **serve** streaming content. It can also be configured to transcode streaming content to improve accessibility of content.
 
-The streaming content must be Video + Audio, and must be published into the Broadcaster in a linear stream. Content can be live (from camera and microphone) and / or recorded (from a disk).
+The streaming content must be Video + Audio, and must be published into the Gateway in a linear stream. Content can be live (from camera and microphone) and / or recorded (from a disk).
 
 ![image](https://user-images.githubusercontent.com/2212651/112745744-4479db80-8fc8-11eb-9ace-0c77ee9bf438.png)
 
@@ -44,26 +44,26 @@ Here are instructions to setup a Livepeer Broadcaster on a local computer. They 
 
 - On Linux, run `cd livepeer-linux-amd64`
 
-4. Run `./livepeer -broadcaster`
+4. Run `./livepeer -gateway`
 
 5. Wait until the text `Video Ingest Endpoint - rtmp://127.0.0.1:1935` is displayed.
 
-**Livepeer Broadcaster is now running.**
+**Livepeer Gateway is now running.**
 
 ![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/d62026e6-620e-455b-8b8f-58b0c8cf7fa8)
 
 # Next Steps
 
-Now that Livepeer Broadcaster is running, here are some further things you can do:
+Now that Livepeer Gateway is running, here are some further things you can do:
 
-- [Publish to, and Consume from a Livepeer Broadcaster](./publish-and-consume-content.md)
+- [Publish to, and Consume from a Livepeer Gateway](./publish-and-consume-content.md)
 
-- [Learn more about how Livepeer Broadcaster works](./architecture-summary.md)
+- [Learn more about how Livepeer Gateway works](./architecture-summary.md)
 
 - [Add Transcoding to increase accessibility of streaming content](./transcoding.md)
 
-- [Build a hosted instance of Livepeer Broadcaster](./hosted-setup.md)
+- [Build a hosted instance of Livepeer Gateway](./hosted-setup.md)
 
-- [Configure Livepeer Broadcaster to start on system boot](./start-on-system-boot.md)
+- [Configure Livepeer Gateway to start on system boot](./start-on-system-boot.md)
 
 - [Build from source code](https://github.com/livepeer/go-livepeer/blob/master/doc/install.md)
