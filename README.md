@@ -66,4 +66,4 @@ Now that Livepeer Gateway is running, here are some further things you can do:
 
 - [Configure Livepeer Gateway to start on system boot](./start-on-system-boot.md)
 
-- [Build from source code](https://github.com/livepeer/go-livepeer/blob/master/doc/install.md)
+- [Build from source code](https://docs.livepeer.org/orchestrators/guides/install-go-livepeer#build-from-source)
