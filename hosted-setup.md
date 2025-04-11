@@ -1,25 +1,25 @@
 ## Hosted Setup
 
-A Livepeer Broadcaster can be deployed on a hosted server. For this guide it is assumed that this hosted server is running Linux (Ubuntu).
+A Livepeer Gateway can be deployed on a hosted server. For this guide it is assumed that this hosted server is running Linux (Ubuntu).
 
 [Return to main page](./README.md#next-steps)
 
-### Livepeer Broadcaster Access Options
+### Livepeer Gateway Access Options
 
-It is necessary to configure Livepeer Broadcaster appropriately, in order to allow required remote access to the server.
+It is necessary to configure Livepeer Gateway appropriately, in order to allow required remote access to the server.
 
 #### Local publish and consume only (no remote access)
 
-When starting Livepeer Broadcaster, run the following command:
+When starting Livepeer Gateway, run the following command:
 ```
 ./livepeer \ 
-        -broadcaster \
+        -gateway \
         -rtmpAddr 127.0.0.1:1935 \
         -httpAddr 127.0.0.1:8935
 ```
 _Note: this command is technically equivalent to running the same command without `-rtmpAddr` or `-httpAddr` flags, as these are the default options. They are explicitly included here for illustrative purposes only._
 
-Livepeer Broadcaster will _only allow content to be published and consumed on the hosted server itself_:
+Livepeer Gateway will _only allow content to be published and consumed on the hosted server itself_:
 
 |        | publish | consume |
 |--------|:-------:|:-------:|
@@ -30,10 +30,10 @@ Livepeer Broadcaster will _only allow content to be published and consumed on th
 
 #### Local publish, Remote consume
 
-When starting Livepeer Broadcaster, run the following command:
+When starting Livepeer Gateway, run the following command:
 ```
 ./livepeer \ 
-        -broadcaster \
+        -gateway \
         -rtmpAddr 127.0.0.1:1935 \
         -httpAddr 0.0.0.0:8935
 ```
@@ -48,10 +48,10 @@ This will _only allow content to be published from the hosted server itself_ but
 
 #### Remote publish and consume (full remote access)
 
-When starting Livepeer Broadcaster, run the following command:
+When starting Livepeer Gateway, run the following command:
 ```
 ./livepeer \ 
-        -broadcaster \
+        -gateway \
         -rtmpAddr 0.0.0.0:1935 \
         -httpAddr 0.0.0.0:8935
 ```
