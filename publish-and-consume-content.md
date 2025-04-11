@@ -7,7 +7,7 @@ Contents:
 
 ## Publish and Consume Content
 
-This section explains how to publish and consume content to and from Livepeer Broadcaster.
+This section explains how to publish and consume content to and from Livepeer Gateway.
 
 This can be done via a [command line interface](#command-line-interface) using `FFmpeg`, or from a [graphical user interface](#graphical-user-interface) using **OBS Studio** and **VLC Media Player**.
 
@@ -15,11 +15,11 @@ This can be done via a [command line interface](#command-line-interface) using `
 
 ### Command Line Interface
 
-This section explains how to publish and consume content to and from Livepeer Broadcaster using a command line interface (CLI).
+This section explains how to publish and consume content to and from Livepeer Gateway using a command line interface (CLI).
 
 #### Install `FFmpeg`
 
-You can test publishing content into a Livepeer Broadcaster using `ffmpeg`.
+You can test publishing content into a Livepeer Gateway using `ffmpeg`.
 
 Install `FFmpeg` on Linux (Ubuntu) using `sudo apt install ffmpeg`
 
@@ -27,9 +27,9 @@ Install `FFmpeg` on a Mac using instructions on [FFmpeg's website](https://www.f
 
 #### Publish a test source
 
-`FFmpeg` can be used to generate and publish a test source of content to Livepeer Broadcaster:
+`FFmpeg` can be used to generate and publish a test source of content to Livepeer Gateway:
 
-0. Make sure Livepeer Broadcaster is running on localhost `127.0.0.1`.
+0. Make sure Livepeer Gateway is running on localhost `127.0.0.1`.
 
 1. Run the following command:
 ```
@@ -45,9 +45,9 @@ ffmpeg -re -f lavfi -i \
   - `1000k` defines the bitrate for the stream
   - `keyint=60` defines the keyframe interval in frames
   
-2. See that Livepeer Broadcaster is receiving a stream called `test_source`.
+2. See that Livepeer Gateway is receiving a stream called `test_source`.
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/136b17be-2d04-46af-93d0-649e6ef14b1f)
+![Image](https://github.com/user-attachments/assets/8526648f-6935-42cb-89f4-a3426e328771)
 
 3. Look in `~/.lpData/offchain` folder to see the segments of video which make up the livestream.
 
@@ -57,55 +57,55 @@ ffmpeg -re -f lavfi -i \
 
 #### Consume content using ffplay
 
-`ffplay` is part of `FFmpeg`, and can be used to request and playback content from Livepeer Broadcaster.
+`ffplay` is part of `FFmpeg`, and can be used to request and playback content from Livepeer Gateway.
 
-0. Make sure content is being published into Livepeer Broadcaster.
+0. Make sure content is being published into Livepeer Gateway.
 
 1. Run `ffplay http://127.0.0.1:9935/stream/test_source.m3u8`
 
-  - `test_source` is the "stream key" used when publishing content to Livepeer Broadcaster.
+  - `test_source` is the "stream key" used when publishing content to Livepeer Gateway.
 
 2. See the content from the `test_source` stream being played back:
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/7025bbf5-b7bc-45b3-bc19-f64d3841e3ff)
+![image](https://github.com/videoDAC/livepeer-gateway/assets/2212651/7025bbf5-b7bc-45b3-bc19-f64d3841e3ff)
 
 [Return to main page](./README.md#next-steps)
 
 #### Inspect content metadata
 
-`curl` is command line tool and library for transferring data with URLs, and can be used to inspect metadata of content published by Livepeer Broadcaster.
+`curl` is command line tool and library for transferring data with URLs, and can be used to inspect metadata of content published by Livepeer Gateway.
 
-0. Make sure content is being published into Livepeer Broadcaster.
+0. Make sure content is being published into Livepeer Gateway.
 
 1. Run `curl http://127.0.0.1:9935/stream/test_source.m3u8`
 
-  - `test_source` is the "stream key" used when publishing content to Livepeer Broadcaster.
+  - `test_source` is the "stream key" used when publishing content to Livepeer Gateway.
 
 2. View metadata about the stream(s) of content available for consumption, with `.m3u8` extension(s):
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/e7f69af6-f8c9-4b37-919d-3ea41a34b844)
+![image](https://github.com/videoDAC/livepeer-gateway/assets/2212651/e7f69af6-f8c9-4b37-919d-3ea41a34b844)
 
 3. Run `curl http://127.0.0.1:9935/stream/test_source/source.m3u8`
 
 4. View metadata about the segment(s) of content available for consumption, with `.ts` extension(s):
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/250f3914-eab8-4b18-821d-68f417a8607b)
+![image](https://github.com/videoDAC/livepeer-gateway/assets/2212651/250f3914-eab8-4b18-821d-68f417a8607b)
 
 5. Run `curl http://127.0.0.1:5935/status`, or open [http://127.0.0.1:5935/status](http://127.0.0.1:5935/status) in a browser.
 
-6. View metadata about the status of the Livepeer Broadcaster, including details of stream(s) being served
+6. View metadata about the status of the Livepeer Gateway, including details of stream(s) being served
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/dcbd841d-c68d-459c-805e-f530cdb186a6)
+![image](https://github.com/videoDAC/livepeer-gateway/assets/2212651/dcbd841d-c68d-459c-805e-f530cdb186a6)
 
 [Return to main page](./README.md#next-steps)
 
 ### Graphical User Interface
 
-This section explains how to [publish content to](#publish-content-using-obs-studio) and [consume content from](#consume-content-using-vlc-media-player) Livepeer Broadcaster using graphical user interfaces (GUIs).
+This section explains how to [publish content to](#publish-content-using-obs-studio) and [consume content from](#consume-content-using-vlc-media-player) Livepeer Gateway using graphical user interfaces (GUIs).
 
 #### Publish content using OBS Studio
 
-**OBS Studio** can be used to configure and publish streaming content to Livepeer Broadcaster:
+**OBS Studio** can be used to configure and publish streaming content to Livepeer Gateway:
 
 1. Download and install [OBS Studio](https://obsproject.com/)
 
@@ -137,13 +137,13 @@ This section explains how to [publish content to](#publish-content-using-obs-stu
 
 ![image](https://user-images.githubusercontent.com/2212651/79850922-3861c300-83e2-11ea-973c-e9ab1f9a49c1.png)
 
-12. Make sure Livepeer Broadcaster is running.
+12. Make sure Livepeer Gateway is running.
 
 13. Click "Start Streaming" (and also "Start Recording" if you also want to record the stream).
 
-14. See that Livepeer Broadcaster is receiving a stream called `obs-studio`.
+14. See that Livepeer Gateway is receiving a stream called `obs-studio`.
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/c2c17faf-96cf-4dce-abfd-e375505afe1b)
+![Image](https://github.com/user-attachments/assets/e832f780-ced1-4763-87b4-320556134ede)
 
 [Learn about what other sources of content can be configured](#configuring-content-in-obs-studio).
 
@@ -151,9 +151,9 @@ This section explains how to [publish content to](#publish-content-using-obs-stu
 
 #### Consume content using VLC Media Player
 
-**VLC Media Player** can be used to request and playback content from Livepeer Broadcaster.
+**VLC Media Player** can be used to request and playback content from Livepeer Gateway.
 
-0. Make sure content is being published into Livepeer Broadcaster.
+0. Make sure content is being published into Livepeer Gateway.
 
 1. Download and install [VLC Media Player](https://www.videolan.org/vlc/index.html)
 
@@ -163,7 +163,7 @@ This section explains how to [publish content to](#publish-content-using-obs-stu
 
 4. Enter `http://127.0.0.1:9935/stream/obs-studio.m3u8` as the network URL
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/e62b3a52-1043-4255-b36a-4c2d552ddcdd)
+![image](https://github.com/videoDAC/livepeer-gateway/assets/2212651/e62b3a52-1043-4255-b36a-4c2d552ddcdd)
 
 5. Click "Play", and see the content from the `obs-studio` stream:
 
@@ -173,7 +173,7 @@ This section explains how to [publish content to](#publish-content-using-obs-stu
 
 #### Configuring Content in OBS Studio
 
-**OBS Studio** can be used to add video and audio content sources to be published to Livepeer Broadcaster.
+**OBS Studio** can be used to add video and audio content sources to be published to Livepeer Gateway.
 
 ![image](https://user-images.githubusercontent.com/2212651/79856956-ae6a2800-83ea-11ea-8e06-e807979bc9db.png)
 
