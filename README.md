@@ -16,7 +16,7 @@ A Livepeer Gateway can **receive** and **serve** streaming content. It can also 
 
 The streaming content must be Video + Audio, and must be published into the Gateway in a linear stream. Content can be live (from camera and microphone) and / or recorded (from a disk).
 
-![image](https://user-images.githubusercontent.com/2212651/112745744-4479db80-8fc8-11eb-9ace-0c77ee9bf438.png)
+![image](https://github.com/user-attachments/assets/86f03ea8-2f3c-49c7-bc99-32bd01f4159f)
 
 It can **receive** streaming content published in `RTMP` format, from tools like [OBS Studio](https://obsproject.com/), [ManyCam](https://manycam.com/), [FFmpeg](https://www.ffmpeg.org/), or many other `rtmp` software libraries and tools.
 
@@ -50,7 +50,7 @@ Here are instructions to setup a Livepeer Broadcaster on a local computer. They 
 
 **Livepeer Gateway is now running.**
 
-![image](https://github.com/videoDAC/livepeer-broadcaster/assets/2212651/d62026e6-620e-455b-8b8f-58b0c8cf7fa8)
+![Image](https://github.com/user-attachments/assets/f7871bd8-d8d8-42b1-bf62-8047c7c15554)
 
 # Next Steps
 
