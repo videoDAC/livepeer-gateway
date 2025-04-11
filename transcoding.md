@@ -3,7 +3,7 @@ Contents:
 - [Transcoding Overview](#transcoding-overview)
 - [Local Transcoding](#local-transcoding)
 - [Local Distributed Transcoding](#local-distributed-transcoding)
-- [Outsourced Transcoding (requires payment in ETH)](#outsourced-transcoding)
+- [Outsourced Transcoding (requires ETH on Arbitrum One)](#outsourced-transcoding-requires-eth-on-arbitrum-one)
 
 ### Transcoding Overview
 
