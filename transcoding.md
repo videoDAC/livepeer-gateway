@@ -100,7 +100,7 @@ Transcoding activities can also be distributed across an Orchestrator, and one o
 
 Transcoding services can be purchased directly from individual Orchestrators operating in Livepeer's public Transcoding Marketplace. Services are provided on a pay-as-you-go basis using Ether as currency, and Arbitrum One for payment clearing. Arbitrum One is a Layer 2 Optimistic Rollup on Ethereum.
 
-1. Obtain an RPC endpoint onto Arbitrum, using [Alchemy](https://www.alchemy.com/) (requires sign-up). Alternatively, run your own Arbitrum RPC endpoint using [these instructions](https://docs.arbitrum.io/run-arbitrum-node/quickstart).
+1. Obtain an RPC endpoint onto Arbitrum, using [Alchemy](https://www.alchemy.com/) (requires sign-up). Alternatively, run your own Arbitrum RPC endpoint using [these instructions](https://docs.arbitrum.io/run-arbitrum-node/quickstart) (advanced).
 
 2. Open another `Terminal` and run the following command:
 ```
