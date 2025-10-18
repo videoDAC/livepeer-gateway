@@ -110,12 +110,12 @@ Transcoding services can be purchased directly from individual Orchestrators ope
         -transcodingOptions P144p30fps16x9,P240p30fps16x9 \
         -ethUrl {insert RPC endpoint here} \
         -pixelsPerUnit 1 \
-        -maxPricePerUnit 1 \
+        -maxPricePerUnit 200 \
         -v 99
 ```
   - `arbitrum-one-mainnet` signifies Arbitrum One network.
   - `-ethUrl` is the location of the RPC endpoint e.g. from Alchemy.
-  - `-pixelsPerUnit` and `-maxPricePerUnit` are for setting the maximum price to be paid for Transcoding
+  - `-pixelsPerUnit` and `-maxPricePerUnit` are for setting the maximum price to be paid for Transcoding. Price is in wei.
 
 3. Enter a Passphrase twice:
 
@@ -152,7 +152,11 @@ This command will deposit some ETH into a smart contract in Livepeer's protocol,
 
 You can now stream content into Livepeer Gateway, and observe that your content is being transcoded into different formats.
 
-Note: You may find that your content is not being transcoded even though you deposited funds into Livepeer Protocol. This is because Orchestrators usually require _a minimimum amount of ETH_ to be held in reserve by the Gateway, in order to agree to perform transcoding work.
+Note: You may find that your content is not being transcoded even though you deposited funds into Livepeer Protocol. This may be because of one of these reasons:
+
+A. Orchestrators set a minimum price per pixel, which might be higher than the price you set when you started your Livepeer Gateway. Try increasing the `maxPricePerUnit` parameter you use when starting up the node. You may also wish to look at the [list of Orchestrators on Livepeer Explorer](https://explorer.livepeer.org/orchestrators) to see their advertised "price per pixel".
+
+B. Orchestrators usually require _a minimimum amount of ETH_ to be held in reserve by the Gateway, in order to agree to perform transcoding work. You can talk to active Orchestrators in the [#orchestrator channel in Livepeer's Discord](https://discord.com/channels/423160867534929930/750796877762527262).
 
 To find out more about Livepeer, go to this [10-minute primer](https://livepeer.org/primer/).
 
