@@ -28,21 +28,21 @@ Here are instructions to setup a Livepeer Broadcaster on a local computer. They 
 
 1. Download the latest release of pre-compiled software from [Livepeer's Release Page on Github](https://github.com/livepeer/go-livepeer/releases), under where it says **Assets**:
 
-- On a Mac, download the `livepeer-darwin-amd64.tar.gz` file of the `livepeer-darwin-arm64.tar.gz` file to the _Downloads_ folder
+- On a Mac, download the `livepeer-darwin-amd64.tar.gz` file or the `livepeer-darwin-arm64.tar.gz` file to the _Downloads_ folder
 
-- On Linux, download the `livepeer-linux-amd64.tar.gz` file
+- On Linux x86-64, download the `livepeer-linux-amd64.tar.gz` file, or on Linux aarch64, download the `livepeer-linux-arm64.tar.gz` file.
 
 2. Unzip the file:
 
 - On Mac, simply open the file, and it will extract to the folder containing the file (_Downloads_).
 
-- On Linux, open the `livepeer-linux-amd64.tar.gz` file then click "Extract", and extract it to "Home".
+- On Linux, open the `livepeer-linux-amd64.tar.gz` or `livepeer-linux-arm64.tar.gz` file then click "Extract", and extract it to "Home".
 
-3. Open `Terminal`, and navigate to the folder containing the `livepeer` binary:
+3. Open `Terminal`, and navigate to the folder containing the `livepeer` binaries:
 
 - On Mac, run `cd Downloads/livepeer-darwin-amd64` or `cd Downloads/livepeer-darwin-arm64`
 
-- On Linux, run `cd livepeer-linux-amd64`
+- On Linux, run `cd livepeer-linux-amd64` or `cd livepeer-linux-arm64`
 
 4. Run `./livepeer -gateway`
 
@@ -58,12 +58,12 @@ Now that Livepeer Gateway is running, here are some further things you can do:
 
 - [Publish to, and Consume from a Livepeer Gateway](./publish-and-consume-content.md)
 
-- [Learn more about how Livepeer Gateway works](./architecture-summary.md)
-
 - [Add Transcoding to increase accessibility of streaming content](./transcoding.md)
 
 - [Build a hosted instance of Livepeer Gateway](./hosted-setup.md)
 
 - [Configure Livepeer Gateway to start on system boot](./start-on-system-boot.md)
+
+- [Learn more about how Livepeer Gateway works](./architecture-summary.md)
 
 - [Build from source code](https://docs.livepeer.org/orchestrators/guides/install-go-livepeer#build-from-source)
