@@ -15,7 +15,7 @@ When starting Livepeer Gateway, run the following command:
 ./livepeer \ 
         -gateway \
         -rtmpAddr 127.0.0.1:1935 \
-        -httpAddr 127.0.0.1:8935
+        -httpAddr 127.0.0.1:9935
 ```
 _Note: this command is technically equivalent to running the same command without `-rtmpAddr` or `-httpAddr` flags, as these are the default options. They are explicitly included here for illustrative purposes only._
 
@@ -35,7 +35,7 @@ When starting Livepeer Gateway, run the following command:
 ./livepeer \ 
         -gateway \
         -rtmpAddr 127.0.0.1:1935 \
-        -httpAddr 0.0.0.0:8935
+        -httpAddr 0.0.0.0:9935
 ```
 This will _only allow content to be published from the hosted server itself_ but will _allow content to be consumed locally or remotely_, by any host with network access to the hosted server.
 
@@ -53,7 +53,7 @@ When starting Livepeer Gateway, run the following command:
 ./livepeer \ 
         -gateway \
         -rtmpAddr 0.0.0.0:1935 \
-        -httpAddr 0.0.0.0:8935
+        -httpAddr 0.0.0.0:9935
 ```
 
 This will _allow content to be published and / or consumed remotely_, by any host with network access to the hosted server.
@@ -64,6 +64,6 @@ This will _allow content to be published and / or consumed remotely_, by any hos
 | remote |   yes   |   yes   |
 
 Note: when publishing or consuming content from a remote host, the server's IP address must be used instead of `127.0.0.1`
-Note: you may need to open ports `1935` and `8935` in your server's firewall configuration in order to allow internet access.
+Note: you may need to open ports `1935` and `9935` in your server's firewall configuration in order to allow internet access.
 
 [Return to main page](./README.md#next-steps)
