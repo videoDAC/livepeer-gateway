@@ -3,7 +3,7 @@ Contents:
 - [Transcoding Overview](#transcoding-overview)
 - [Local Transcoding](#local-transcoding)
 - [Local Distributed Transcoding](#local-distributed-transcoding)
-- [Outsourced Transcoding (requires ETH on Arbitrum One)](#outsourced-transcoding-requires-eth-on-arbitrum-one)
+- [Non-local Transcoding (requires ETH on Arbitrum One)](#non-local-transcoding-requires-eth-on-arbitrum-one)
 
 ### Transcoding Overview
 
@@ -96,7 +96,7 @@ Transcoding activities can also be distributed across an Orchestrator, and one o
 
 [Return to main page](./README.md#next-steps)
 
-### Outsourced Transcoding (requires ETH on Arbitrum One)
+### Non-local Transcoding (requires ETH on Arbitrum One)
 
 Transcoding services can be purchased directly from individual Orchestrators operating in Livepeer's public Transcoding Marketplace. Services are provided on a pay-as-you-go basis using Ether as currency, and Arbitrum One for payment clearing. Arbitrum One is a Layer 2 Optimistic Rollup on Ethereum.
 
@@ -148,7 +148,7 @@ This command will deposit some ETH into a smart contract in Livepeer's protocol,
 
 9. Enter the amount of ETH you would like to keep in reserve in the contract, and press return.
 
-**Livepeer Gateway is now running with Outsourced Transcoding on Livepeer, with payment on Ethereum.**
+**Livepeer Gateway is now running with Non-local Transcoding on Livepeer, with payment on Arbitrum.**
 
 You can now stream content into Livepeer Gateway, and observe that your content is being transcoded into different formats.
 
